@@ -8,11 +8,12 @@ import DesMenu from "../components/DesMenu.astro";
 >
     <div class="container mx-auto flex justify-between max-md:flex-col">
         <div
+            :class="open ? 'hidden':'relative'"
             class="relative block p-2 lg:p-2 text-lg text-lime-600 font-normal"
         >
             <a
                 href="/"
-                class="flex items-center hover:scale-105 text-cyan-500 transition-all"
+                class="flex items-center hover:scale-105 text-cyan-500 transition-all max-md:justify-center"
             >
                 <svg
                     id="Capa_2"
@@ -146,8 +147,199 @@ import DesMenu from "../components/DesMenu.astro";
                 </h3> -->
             </a>
         </div>
-        <ul class="flex p-2 gap-1 text-lg font-black items-center">
-            <!--Regular Link-->
+        <ul
+            x-show="open"
+            x-transition:enter="transition ease-in-out duration-300"
+            class="flex flex-wrap p-2 gap-1 text-lg font-black items-center md:hidden"
+        >
+            <li
+                class="hover:bg-lime-900 hover:text-white hover:scale-105 transition-all duration-300 rounded-full"
+            >
+                <a
+                    href="/cursos-de-ingles-general-extranjero"
+                    class="relative block py-2 px-2 max-md:text-sm max-md:text-center"
+                    >Ingles General</a
+                >
+            </li>
+            <li
+                class="hover:bg-emerald-600 hover:text-white hover:scale-105 transition-all duration-300 rounded-full"
+            >
+                <a
+                    href="/maestrias-en-el-extranjero"
+                    class="relative block py-2 px-2 max-md:text-sm max-md:text-center"
+                    >Maestrias</a
+                >
+            </li>
+            <!--Hoverable Link-->
+            <li
+                class="hoverable hover:bg-[#4A8048] hover:text-white transition-all duration-300 rounded-full"
+            >
+                <a
+                    href="#"
+                    class="relative block py-2 px-2 max-md:text-sm max-md:text-center"
+                    >Cursos Profesionales</a
+                >
+                <div class="mega-menu mb-16 sm:mb-0 shadow-xl bg-[#4A8048ec]">
+                    <div
+                        class="container mx-auto w-full flex flex-wrap justify-between"
+                    >
+                        <div class="w-full text-white mb-8">
+                            <h2
+                                class="text-2xl capitalize tracking-widest pt-3"
+                            >
+                                Especializaciones Para Continuar Tus Estudios de
+                                Idiomas
+                            </h2>
+                            <p class="text-center">
+                                Especial para un nivel de inglés equivalente o
+                                mayor a B1.
+                            </p>
+                        </div>
+                        <DesMenu
+                            title="TOEFL"
+                            name="raphael:books"
+                            url="/preparacioncertificaciontoefl"
+                        >
+                            <p class="text-gray-100 text-sm">
+                                <strong
+                                    >Test of English as a Foreign Language
+                                </strong>: Es una prueba estandarizada que
+                                evalúa el dominio del idioma inglés en personas
+                                cuya lengua materna no es el inglés.
+                            </p>
+                        </DesMenu>
+                        <DesMenu
+                            title="TESOL"
+                            name="raphael:pen"
+                            url="/preparacion-tesol-caracteristicas"
+                        >
+                            <p class="text-gray-100 text-sm">
+                                <strong
+                                    >Teachers of English to Speakers of Other
+                                    Languages:
+                                </strong> Es una certificación internacional que
+                                evalúa y verifica las habilidades requeridas para
+                                enseñar inglés en países extranjeros.
+                            </p>
+                        </DesMenu>
+                        <DesMenu
+                            title="IELTS"
+                            name="raphael:globealt2"
+                            url="/certificacion-ielts"
+                        >
+                            <p class="text-gray-100 text-sm">
+                                <strong
+                                    >International English Language Testing
+                                    System:
+                                </strong> Es la certificación de inglés más reconocida
+                                a nivel mundial. Se utiliza para propósitos migratorios,
+                                estudios o empleo en países donde el inglés es la
+                                lengua nativa o se habla mayoritariamente.
+                            </p>
+                        </DesMenu>
+                        <DesMenu
+                            title="VET"
+                            name="raphael:customer"
+                            url="/entrenamientovocacional"
+                        >
+                            <p class="text-gray-100 text-sm">
+                                <strong class="font-black"
+                                    >Vocational Education and Training:
+                                </strong> Son cursos diseñados para proporcionar
+                                habilidades prácticas directamente aplicables en
+                                el lugar de trabajo, lo que permite a los estudiantes
+                                obtener experiencia laboral relevante.
+                            </p>
+                        </DesMenu>
+                    </div>
+                </div>
+            </li>
+            <li
+                class="hoverable hover:bg-[#023323] hover:text-white transition-all duration-300 rounded-full"
+            >
+                <a
+                    href="#"
+                    class="relative block py-2 px-2 max-md:text-sm max-md:text-center"
+                    >Destinos</a
+                >
+                <div class="mega-menu mb-16 sm:mb-0 shadow-xl bg-[#023323ec]">
+                    <div
+                        class="container mx-auto w-full flex flex-wrap justify-between"
+                    >
+                        <div class="w-full text-white mb-8">
+                            <h2
+                                class="text-2xl capitalize tracking-widest pt-3"
+                            >
+                                Los mejores lugares para estudiar y trabajar en
+                                el extranjero
+                            </h2>
+                            <p class="text-center">
+                                Nuestro asesoramiento es importante para
+                                conseguir los mejores resultados en alguno de
+                                estos destinos
+                            </p>
+                        </div>
+                        <DesMenu
+                            title="Australia"
+                            name="flag:hm-4x3"
+                            url="/estudiaenaustralia"
+                        >
+                            <p class="text-sm">
+                                Australia tiene más de 10,000 playas, como la
+                                impresionante Whitehaven Beach en Whitsundays.
+                            </p>
+                        </DesMenu>
+
+                        <DesMenu
+                            title="N. Zelanda"
+                            name="flag:nz-4x3"
+                            url="/estudiaennuevazelanda"
+                        >
+                            <p class="text-sm">
+                                Explora la belleza natural de Nueva Zelanda,
+                                desde los picos nevados de los Alpes del Sur
+                                hasta los fiordos de Milford Sound.
+                            </p>
+                        </DesMenu>
+                        <DesMenu
+                            title="Inglaterra"
+                            name="flag:gb-eng-4x3"
+                            url="/estudiaeninglaterra"
+                        >
+                            <p class="text-sm">
+                                Sumérgete en la historia de Londres, desde el
+                                Museo Británico hasta el icónico Big Ben.
+                            </p>
+                        </DesMenu>
+
+                        <DesMenu
+                            title="Irlanda"
+                            name="flag:ie-4x3"
+                            url="/estudiaenirlanda"
+                        >
+                            <p class="text-sm">
+                                Disfruta de la música tradicional irlandesa en
+                                los pubs locales mientras perfeccionas tus
+                                habilidades lingüísticas.
+                            </p>
+                        </DesMenu>
+                        <DesMenu
+                            title="Canadá"
+                            name="flag:ca-4x3"
+                            url="/estudiaencanada"
+                        >
+                            <p class="text-sm">
+                                Explora la diversidad cultural de Canadá y
+                                visita lugares emblemáticos como las Cataratas
+                                del Niágara.
+                            </p>
+                        </DesMenu>
+                        <!--Aqui va el componente -->
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <ul class="hidden p-2 gap-1 text-lg font-black items-center md:flex">
             <li
                 class="hover:bg-lime-900 hover:text-white hover:scale-105 transition-all duration-300 rounded-full"
             >
@@ -156,7 +348,15 @@ import DesMenu from "../components/DesMenu.astro";
                     class="relative block py-2 px-4">Ingles General</a
                 >
             </li>
-
+            <li
+                class="hover:bg-emerald-600 hover:text-white hover:scale-105 transition-all duration-300 rounded-full"
+            >
+                <a
+                    href="/maestrias-en-el-extranjero"
+                    class="relative block py-2 px-2 max-md:text-sm max-md:text-center"
+                    >Maestrias</a
+                >
+            </li>
             <!--Hoverable Link-->
             <li
                 class="hoverable hover:bg-[#4A8048] hover:text-white transition-all duration-300 rounded-full"
@@ -320,8 +520,36 @@ import DesMenu from "../components/DesMenu.astro";
                 </div>
             </li>
         </ul>
+        <button
+            class="text-gray-500 w-10 h-10 relative focus:outline-none bg-white
+                    md:hidden"
+            @click="open = !open"
+        >
+            <span class="sr-only">Open main menu</span>
+            <div
+                class="block w-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2"
+            >
+                <span
+                    aria-hidden="true"
+                    class="block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out"
+                    :class="{'rotate-45': open,' -translate-y-1.5': !open }"
+                ></span>
+                <span
+                    aria-hidden="true"
+                    class="block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out"
+                    :class="{'opacity-0': open } "></span>
+                <span
+                    aria-hidden="true"
+                    class="block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out"
+                    :class="{'-rotate-45': open, ' translate-y-1.5': !open}"
+                ></span>
+            </div>
+        </button>
     </div>
 </nav>
+<script
+    src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+    defer></script>
 
 <style>
     strong {

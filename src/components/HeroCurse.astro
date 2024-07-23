@@ -10,7 +10,7 @@ const { title, src, sub } = Astro.props;
 ---
 
 <div
-    class="relative max-h-[400px] overflow-hidden flex items-center justify-center"
+    class="relative max-h-[400px] overflow-hidden flex items-center justify-center max-sm:h-[300px]"
 >
     <!-- Imagen de fondo con superposición degradada -->
     <div
@@ -21,7 +21,7 @@ const { title, src, sub } = Astro.props;
 
     <!-- Contenido centrado -->
     <div class="absolute transform text-white text-center z-10">
-        <h3 class="text-6xl max-md:text-3xl font-bold mb-4 tracking-widest">
+        <h3 class="text-6xl max-md:text-2xl font-bold mb-4 tracking-widest">
             {title}
         </h3>
         <p class="text-lg">{sub}</p>

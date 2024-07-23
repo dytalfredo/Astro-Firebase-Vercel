@@ -9,7 +9,9 @@ import "@fontsource/lato";
 const { title, src, sub } = Astro.props;
 ---
 
-<div class="relative h-screen flex items-center justify-center">
+<div
+    class="relative h-screen flex items-center justify-center max-md:h-[350px]"
+>
     <!-- Imagen de fondo con superposición degradada -->
     <div
         class="absolute inset-0 bg-gradient-to-b from-lime-900 to-transparent opacity-70"

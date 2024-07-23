@@ -5,7 +5,7 @@
 <h1
     class="text-6xl max-md:text-5xl font-normal pt-10 tracking-wider max-md:flex-col leading-snug capitalize"
 >
-    Tus Sueños de <span class="animar"> </span>
+    Tus Sueños de <span class="animar max-md:before:pl-52"> </span>
     <span class="point">Estudiar</span> Esperan
 </h1>
 
@@ -14,7 +14,7 @@
         .animar::before {
             content: "Estudiar";
             position: relative;
-            left: calc(((100vw) / 2) - 100px);
+            left: calc(((100vw) / 2) - 115px);
         }
     }
     h1 {
@@ -27,11 +27,12 @@
     }
 
     .point {
-        content: "Estudiar";
+        content: "";
         visibility: hidden;
-        animation: animate infinite 1s;
-        padding-left: 10px;
-        padding-right: 14px;
+
+        padding-left: 18px;
+        padding-right: 16px;
+        max-width: 80%;
     }
 
     .animar::before {
