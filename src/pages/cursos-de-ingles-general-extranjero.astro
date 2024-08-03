@@ -11,9 +11,18 @@ import Layout from "../layouts/Layout.astro";
 import ListSeccin from "../components/ListSección.astro";
 import ImgBackground from "../components/ImgBackground.astro";
 import TravelsCards from "../components/TravelsCards.astro";
+import DesMenu from "../components/DesMenu.astro";
+import CountryEnglis from "../components/CountryEnglis.astro";
 ---
 
-<Layout title="Cursos de ingles en el extranjero | Acompañamiento completo">
+<Layout
+    title="Cursos de inglés en el extranjero | Acompañamiento completo"
+    url_canonical="https://latamstudyvisa.com/cursos-de-ingles-general-extranjero/"
+    og_title="Cursos de inglés en el extranjero | Acompañamiento completo"
+    og_descrip="¡Embárcate en una aventura educativa inolvidable y descubre la magia de aprender un idioma en el extranjero!"
+    og_img="/opengraph/openGraph-Estudia-Ingles.jpg"
+    og_img_alt="Diferentes destinos para estudiar inglés"
+>
     <main class="bg-white">
         <HeroVideoCurse />
 
@@ -24,7 +33,7 @@ import TravelsCards from "../components/TravelsCards.astro";
                 <h2
                     class="text-4xl text-gray-800 font-semibold text-center mb-4 tracking-wide"
                 >
-                    Estudia ingles en el extrangero con Latam Study Visa
+                    Estudia inglés en el extrangero con Latam Study Visa
                 </h2>
                 <p class="text-xl text-gray-700 text-center mt-4">
                     ¡Embárcate en una aventura educativa inolvidable y descubre
@@ -40,13 +49,15 @@ import TravelsCards from "../components/TravelsCards.astro";
 
         <ListSeccin />
 
+        <CountryEnglis />
+
         <ImgBackground />
         <div class="blockAnimation">
             <TravelsCards />
         </div>
         <div class="mt-12">
             <FormularioContacto
-                title="¿Quieres estudiar ingles en el extranjero?"
+                title="¿Quieres estudiar inglés en el extranjero?"
             />
         </div>
     </main>

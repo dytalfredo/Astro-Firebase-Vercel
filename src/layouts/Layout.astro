@@ -3,9 +3,15 @@ import Header from "../components/Header.astro";
 
 interface Props {
 	title: string;
+	url_canonical?: string;
+	og_title?: string;
+	og_descrip?: string;
+	og_img?: string;
+	og_img_alt?: string;
 }
 
-const { title } = Astro.props;
+const { title, url_canonical, og_title, og_descrip, og_img, og_img_alt } =
+	Astro.props;
 
 import "@fontsource/lato";
 import "@fontsource/abril-fatface";
@@ -17,55 +23,38 @@ import Adverten from "../components/Adverten.astro";
 	<head>
 		<meta charset="UTF-8" />
 		<title>{title}</title>
-		<meta
-			name="description"
-			content="La mejor experiencia de la mano del mejor asesoramiento y las mejores instituciones"
-		/>
+		<meta name="description" content={og_descrip} />
 		<meta name="viewport" content="width=device-width" />
 
 		<meta name="theme-color" content="#09f" />
-		<link rel="canonical" href="https://latamstudyvisa.com" />
+		<link rel="canonical" href={url_canonical} />
 
-		<meta name="robots" content="noindex" />
+		<meta name="robots" content="index" />
 
-		<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
-		<!-- 	
-		<meta property="og:url" content="https://paletasdehelado.com/" />
+		<meta property="og:url" content={url_canonical} />
 		<meta property="og:type" content="website" />
-		<meta
-			property="og:title"
-			content="Maquinaria y Capacitación para fabricar paletas de helado"
-		/>
-		<meta
-			property="og:description"
-			content="Somos fabricantes de equipos de refrigeración en acero inoxidable y dueños de heladerias. Aprovecha está oportunidad y empieza en el mundo de la paleteria. ¡Te ayudaremos!"
-		/>
+		<meta property="og:title" content={og_title} />
+		<meta property="og:description" content={og_descrip} />
 		<meta
 			property="og:image"
-			content="https://paletasdehelado.com/opengraphimg4.jpg"
+			content=`https://latamstudyvisa.com${og_img}`
 		/>
-		<meta property="og:image:alt" content="Máquinas de helado" />
+		<meta property="og:image:alt" content={og_img_alt} />
 		<meta property="og:image:width" content="400" />
 		<meta property="og:image:height" content="400" />
 
-	
 		<meta name="twitter:card" content="summary_large_image" />
-		<meta property="twitter:domain" content="paletasdehelado.com" />
-		<meta property="twitter:url" content="https://paletasdehelado.com/" />
-		<meta
-			name="twitter:title"
-			content="Maquinaria y Capacitación para fabricar paletas de helado"
-		/>
-		<meta
-			name="twitter:description"
-			content="Somos fabricantes de equipos de refrigeración en acero inoxidable y dueños de heladerias. Aprovecha está oportunidad y empieza en el mundo de la paleteria. ¡Te ayudaremos!"
-		/>
+		<meta property="twitter:domain" content="latamstudyvisa.com" />
+		<meta property="twitter:url" content={url_canonical} />
+		<meta name="twitter:title" content={og_title} />
+		<meta name="twitter:description" content={og_descrip} />
 		<meta
 			name="twitter:image"
-			content="https://res.opengraph.xyz/6064b869-74ed-4eb9-b76c-0b701ffe7e6b/v1/paletasdehelado.com/Maquinas%20y%20Capacitaci%C3%B3n%20para%20fabricar%20paletas%20de%20helado/https%3A%2F%2Fopengraph.b-cdn.net%2Fproduction%2Fdocuments%2Fe9bb7daa-e10a-4136-a98b-b5c05690c759.jpg%3Ftoken%3Dox571NCZ1xYPaIhrP2yUYWdhqET633TqbflA5cxx9EU%26height%3D800%26width%3D1200%26expires%3D33239726650/og.png"
+			content=`https://latamstudyvisa.com${og_img}`
 		/>
-		<meta property="twitter:image:alt" content="Máquinas de helado" /> -->
+		<meta property="twitter:image:alt" content={og_img_alt} />
 	</head>
 	<body>
 		<Adverten />
