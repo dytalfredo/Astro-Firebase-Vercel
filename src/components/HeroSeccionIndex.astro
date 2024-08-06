@@ -13,9 +13,9 @@ import TextoAnimate from "./TextoAnimate.astro";
         <p
             class="text-white font-semibold text-base text-center max-w-xl mx-auto mt-4"
         >
-            SERVERÑES Descubre la riqueza cultural, amplía tus horizontes y
-            construye un futuro brillante en Maravillosos Destinos. No importa
-            si eres estudiante, profesional o aventurero.
+            Descubre la riqueza cultural, amplía tus horizontes y construye un
+            futuro brillante en Maravillosos Destinos. No importa si eres
+            estudiante, profesional o aventurero.
         </p>
         <span class="text-2xl font-semibold p-3 mb-3 mt-4 block tracking-wider">
             ¡Nosotros te guiaremos en esta experiencia!
@@ -40,5 +40,11 @@ import TextoAnimate from "./TextoAnimate.astro";
     span {
         font-family: "Abril Fatface", system-ui;
         text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.6);
+    }
+
+    @media not all and (min-width: 768px) {
+        .hero {
+            background-image: url("herovisamobil.jpg");
+        }
     }
 </style>

@@ -17,6 +17,7 @@ import "@fontsource/lato";
 import "@fontsource/abril-fatface";
 import Footer from "../components/Footer.astro";
 import Adverten from "../components/Adverten.astro";
+import Formulario2 from "../components/Formulario2.astro";
 ---
 
 <html lang="es">
@@ -55,21 +56,50 @@ import Adverten from "../components/Adverten.astro";
 			content=`https://latamstudyvisa.com${og_img}`
 		/>
 		<meta property="twitter:image:alt" content={og_img_alt} />
+		<!-- GetResponse Analytics -->
+		<script type="text/javascript">
+			(function (m, o, n, t, e, r, _) {
+				m["__GetResponseAnalyticsObject"] = e;
+				m[e] =
+					m[e] ||
+					function () {
+						(m[e].q = m[e].q || []).push(arguments);
+					};
+				r = o.createElement(n);
+				_ = o.getElementsByTagName(n)[0];
+				r.async = 1;
+				r.src = t;
+				r.setAttribute("crossorigin", "use-credentials");
+				_.parentNode.insertBefore(r, _);
+			})(
+				window,
+				document,
+				"script",
+				"https://an.gr-wcon.com/script/5004c56b-8df4-4b5c-b814-023e9be75190/ga.js",
+				"GrTracking",
+			);
+		</script>
+		<!-- End GetResponse Analytics -->
 	</head>
 	<body>
 		<Adverten />
 		<Header />
 
 		<slot />
-
+		<div class="cNZMoQ"></div>
 		<Footer />
 	</body>
 </html>
 
 <style is:global>
 	:root {
+		.cNZMoQ {
+			display: none !important;
+		}
 	}
-
+	.cNZMoQ {
+		display: none !important;
+	}
 	a {
 		text-decoration: none;
 	}
