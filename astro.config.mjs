@@ -18,11 +18,7 @@ export default defineConfig({
     enabled: false,
   },
   integrations: [tailwind(), icon()],
-  adapter: vercel({
-    webAnalytics: {
-      enabled: true,
-    },
-  }),
+  adapter: vercel(),
   output: "server",
 
   vite: {
