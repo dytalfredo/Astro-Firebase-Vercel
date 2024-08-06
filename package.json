@@ -29,6 +29,7 @@
   },
   "devDependencies": {
     "@iconify-json/flag": "^1.1.53",
-    "@iconify-json/raphael": "^1.1.8"
+    "@iconify-json/raphael": "^1.1.8",
+    "vite-plugin-pwa": "^0.20.1"
   }
 }
