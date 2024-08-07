@@ -22,9 +22,7 @@ export default defineConfig({
   output: "server",
 
   vite: {
-    build: {
-      cssMinify: "lightningcss",
-    },
+
     ssr: {
       noExternal: ["path-to-regexp"],
     },
